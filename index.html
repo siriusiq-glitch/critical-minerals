@@ -6,7 +6,9 @@
   <title>Tech&amp;Politics 세미나 | 국회 기술과 정치 연구회</title>
   <meta property="og:title" content="Tech&amp;Politics 세미나 - 자원빈국 대한민국은 어떻게 제련소를 수출했나">
   <meta property="og:description" content="2026년 6월 19일(금) · 국회의원회관 · 백순흠 고려아연 사장 특강">
-  <meta property="og:image" content="smelter.jpg">
+  <meta property="og:image" content="https://siriusiq-glitch.github.io/critical-minerals/smelter.jpg?v=2">
+  <meta property="og:url" content="https://siriusiq-glitch.github.io/critical-minerals">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -472,7 +474,7 @@
       <strong>「AI는 어떻게 우리의 무기가 되는가」</strong><br>
       <span class="recent-summary">
         일본·인도 사례처럼 유권자 소통과 공약 만들기에 AI를 활용하는 흐름은 이제 막을 수 없다.
-        의원실 챗봇은 지금 당장 돈 없이도 시작할 수 있는데, 홍보용보다 시민 의견 수렴용으로 활용 가치가 크다.
+        의원실 찷봇은 지금 당장 돈 없이도 시작할 수 있는데, 홍보용보다 시민 의견 수렴용으로 활용 가치가 크다.
         퇴근 후에도 AI가 일하는 의원실이 결국 앞서간다.
       </span>
     </li>
@@ -625,7 +627,6 @@
       세미나: '세 번째 국회 세미나 — 자원빈국 대한민국은 어떻게 제련소를 수출했나 (2026.06.19)'
     };
 
-    // FormSubmit 사용
     try {
       const res = await fetch('https://formsubmit.co/ajax/tech_n_politics@naver.com', {
         method: 'POST',
@@ -640,7 +641,6 @@
         success.classList.add('show');
       }
     } catch(err) {
-      // fallback: mailto
       const subject = encodeURIComponent('[세미나 신청] 세 번째 국회 세미나');
       const body = encodeURIComponent(`이름: ${data.이름}\n소속: ${data.소속}\n연락처: ${data.연락처}`);
       window.location.href = `mailto:tech_n_politics@naver.com?subject=${subject}&body=${body}`;
